@@ -1,14 +1,32 @@
-import './App.css';
-import { useFlags } from 'launchdarkly-react-client-sdk';
+import "./App.css";
+import { useFlags } from "launchdarkly-react-client-sdk";
+import Toggle from "./components/Toggle"; // Import the Toggle component
 
 function App() {
-  const { trunkBaseDev } = useFlags();
+  const { trunkBaseDev, reactExample } = useFlags();
 
   return (
-      <div className="App">
-      <header className="App-header" id="App-header" style={{ backgroundColor: trunkBaseDev ? '#00844B' : '#373841' }}>
-        <p>The trunkBaseDev feature flag evaluates to <b>{trunkBaseDev ? 'True' : 'False'}</b></p>
-        {trunkBaseDev ? (<button class="funButton" id="tbd" onClick={() => console.log('Button clicked!')}>Click Me</button>) : null}
+    <div className="App">
+      <header
+        className="App-header"
+        id="App-header"
+        style={{ backgroundColor: trunkBaseDev ? "#00844B" : "#373841" }}
+      >
+        <p>
+          The <b>trunk-base-dev</b> feature flag evaluates to{" "}
+          <b>{trunkBaseDev ? "True" : "False"}</b>
+        </p>
+        {trunkBaseDev ? (
+          <button
+            class="funButton"
+            id="tbd"
+            onClick={() => console.log("Button clicked!")}
+          >
+            Click Me
+          </button>
+        ) : null}
+        {reactExample ? <Toggle /> : null}
+        <b>{reactExample ? "True" : "False"}</b>
       </header>
     </div>
   );
