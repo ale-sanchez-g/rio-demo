@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.funButton {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 15px 32px; /* Some padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline from links */
+  display: inline-block; /* Allow setting dimensions */
+  font-size: 16px; /* Increase font size */
+  margin: 4px 2px; /* Add some margin around the button */
+  cursor: pointer; /* Change mouse cursor on hover */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.funButton:hover {
+  background-color: #45a049; /* Darker shade of green */
+  transform: scale(1.05); /* Slightly increase size */
+}
