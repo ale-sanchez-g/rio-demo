@@ -6,7 +6,7 @@ jest.mock('launchdarkly-react-client-sdk', () => ({
   useFlags: jest.fn(),
 }));
 
-describe('App dynamic with trunkBaseDev feature flag', () => {
+describe('App dynamic with LaunchDarkly feature flag', () => {
   describe('when trunkBaseDev is true', () => {
     beforeEach(() => {
       const { useFlags } = require('launchdarkly-react-client-sdk');
@@ -49,6 +49,30 @@ describe('App dynamic with trunkBaseDev feature flag', () => {
       render(<App />);
       const headerElement = document.getElementById('App-header');
       expect(headerElement).toHaveStyle('background-color: #373841');
+    });
+  });
+
+  describe('when reactExample is true', () => {
+    beforeEach(() => {
+      const { useFlags } = require('launchdarkly-react-client-sdk');
+      useFlags.mockImplementation(() => ({ reactExample: true }));
+    });
+    it('renders the Toggle component', () => {
+      render(<App />);
+      const toggleElement = document.getElementById('toggle');
+      expect(toggleElement).toBeInTheDocument();
+    });
+  });
+  
+  describe('when reactExample is false', () => {
+    beforeEach(() => {
+      const { useFlags } = require('launchdarkly-react-client-sdk');
+      useFlags.mockImplementation(() => ({ reactExample: false }));
+    });
+    it('renders the Toggle component', () => {
+      render(<App />);
+      const toggleElement = document.getElementById('toggle');
+      expect(toggleElement).not.toBeInTheDocument();
     });
   });
 });

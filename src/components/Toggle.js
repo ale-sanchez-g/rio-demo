@@ -11,6 +11,7 @@ function Toggle() {
   return (
     <button
       onClick={toggle}
+      id='toggle'
       className={`toggle-button ${isToggled ? 'on' : ''}`}
     >
       {isToggled ? 'On' : 'Off'}

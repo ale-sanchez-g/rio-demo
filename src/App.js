@@ -18,7 +18,7 @@ function App() {
         </p>
         {trunkBaseDev ? (
           <button
-            class="funButton"
+            className="funButton"
             id="tbd"
             onClick={() => console.log("Button clicked!")}
           >
@@ -26,7 +26,7 @@ function App() {
           </button>
         ) : null}
         {reactExample ? <Toggle /> : null}
-        <b>{reactExample ? "True" : "False"}</b>
+        <b>{reactExample ? "show-toggle" : "no-show-toggle"}</b>
       </header>
     </div>
   );
