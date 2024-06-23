@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import Toggle from './Toggle'; // Adjust the import path as necessary
 

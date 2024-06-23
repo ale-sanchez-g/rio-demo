@@ -1,0 +1,25 @@
+.userInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid blue;
+  box-sizing: border-box;
+}
+
+.userInput input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #007BFF; /* Brighter blue border */
+    box-sizing: border-box;
+    border-radius: 8px; /* Rounded corners */
+    background-color: #E3F2FD; /* Light blue background */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for focus */
+}
+
+.userInput input:focus {
+    border-color: #0056b3; /* Darker blue when focused */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Soft glow effect */
+}

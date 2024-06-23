@@ -1,6 +1,7 @@
 import "./App.css";
 import { useFlags } from "launchdarkly-react-client-sdk";
 import Toggle from "./components/Toggle"; // Import the Toggle component
+import Login from "./components/logIn"; // Import the Login component
 
 function App() {
   const { trunkBaseDev, reactExample } = useFlags();
@@ -25,6 +26,7 @@ function App() {
             Click Me
           </button>
         ) : null}
+        <Login />
         {reactExample ? <Toggle /> : null}
         <b>{reactExample ? "show-toggle" : "no-show-toggle"}</b>
       </header>
