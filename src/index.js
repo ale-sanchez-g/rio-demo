@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 (async () => {
   const LDProvider = await asyncWithLDProvider({
-    clientSideID: '667a415792acc1105330f692',
+    clientSideID: '667bb77a656c4a109abc23ae',
     context: {
       kind: 'user',
       key: 'example-user-key',
